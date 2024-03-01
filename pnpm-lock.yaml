@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@vue-email/nuxt':
-    specifier: ^0.8.18
-    version: 0.8.18(typescript@5.3.3)(vue@3.4.21)
+    specifier: L422Y/nuxt-1#patch-1
+    version: git@github.com+L422Y/nuxt-1/e4c6f2a3772ff4e1604269f560b17110ab4047bd(typescript@5.3.3)(vue@3.4.21)
   nuxt:
     specifier: ^3.10.3
     version: 3.10.3(typescript@5.3.3)(vite@5.1.4)
@@ -1410,6 +1410,8 @@ packages:
       '@parcel/watcher-win32-ia32': 2.4.1
       '@parcel/watcher-win32-x64': 2.4.1
     dev: false
+    bundledDependencies:
+      - napi-wasm
 
   /@pkgjs/parseargs@0.11.0:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1898,28 +1900,6 @@ packages:
       - ts-node
       - typescript
       - utf-8-validate
-    dev: false
-
-  /@vue-email/nuxt@0.8.18(typescript@5.3.3)(vue@3.4.21):
-    resolution: {integrity: sha512-4Fl7r8MrkCe8tCMCR06z31iDDGkM9kzXqlTW5D2TlSd133McY6q1w4Cb2AK78snCegy3nOIbcD/nyZfKxLNisQ==}
-    dependencies:
-      '@nuxt/kit': 3.10.3
-      '@vue-email/compiler': 0.8.14(typescript@5.3.3)(vue@3.4.21)
-      defu: 6.1.4
-      destr: 2.0.3
-      json5: 2.2.3
-      sirv: 2.0.4
-      vue-component-meta: 1.8.27(typescript@5.3.3)
-      vue-email: 0.8.10(typescript@5.3.3)(vue@3.4.21)
-    transitivePeerDependencies:
-      - bufferutil
-      - canvas
-      - rollup
-      - supports-color
-      - ts-node
-      - typescript
-      - utf-8-validate
-      - vue
     dev: false
 
   /@vue-email/tailwind@0.0.6:
@@ -5789,6 +5769,7 @@ packages:
 
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    requiresBuild: true
     dev: false
 
   /saxes@6.0.0:
@@ -7077,4 +7058,29 @@ packages:
       archiver-utils: 4.0.1
       compress-commons: 5.0.3
       readable-stream: 3.6.2
+    dev: false
+
+  git@github.com+L422Y/nuxt-1/e4c6f2a3772ff4e1604269f560b17110ab4047bd(typescript@5.3.3)(vue@3.4.21):
+    resolution: {commit: e4c6f2a3772ff4e1604269f560b17110ab4047bd, repo: git@github.com:L422Y/nuxt-1.git, type: git}
+    id: git@github.com+L422Y/nuxt-1/e4c6f2a3772ff4e1604269f560b17110ab4047bd
+    name: '@vue-email/nuxt'
+    version: 0.8.18
+    dependencies:
+      '@nuxt/kit': 3.10.3
+      '@vue-email/compiler': 0.8.14(typescript@5.3.3)(vue@3.4.21)
+      defu: 6.1.4
+      destr: 2.0.3
+      json5: 2.2.3
+      sirv: 2.0.4
+      vue-component-meta: 1.8.27(typescript@5.3.3)
+      vue-email: 0.8.10(typescript@5.3.3)(vue@3.4.21)
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - rollup
+      - supports-color
+      - ts-node
+      - typescript
+      - utf-8-validate
+      - vue
     dev: false
